@@ -1,0 +1,402 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.2 (25/3/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+\def\prd{{Phys. Rev.} D}
+\def\PRL{{Phys.Rev.} Lett}
+\def\apjl{{Astrophys. J.} Lett}
+\def\apj{{Astrophys. J.}}
+\def\CQG{{Class. Quantum Grav.}}
+\def\aaps{{A\&AS}}
+\def\pasj{{PASJ}}
+\def\mnras{{MNRAS}} 
+\def\aapr{{A\&ARv}}
+\def\aap{{A\&A}}
+\def\na{{New Astronomy}}
+\def\ptp{{Progress of Theoretical Physics}}
+\def\apjs{{ApJS}}
+\def\araa{{ARA\&A}}
+\def\ssr{{Space Sci. Rev.}} 
+
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\makeatletter
+\newcommand*{\emailA}[1]{\def\@emailA{#1}}
+\newcommand*{\emailB}[1]{\def\@emailB{#1}}
+\patchcmd{\maketitle}% <cmd>
+  {\ifthenelse{\isundefined{\@email}}{}{\addtomaketitle{\emailsymbol\emaillink{\@email}}}}% <search>
+  {\ifthenelse{\isundefined{\@emailA}}{}{\addtomaketitle{\emailsymbol\emaillink{\@emailA}}}%
+   \ifthenelse{\isundefined{\@emailB}}{}{\addtomaketitle{\emailsymbol\emaillink{\@emailB}}}}% <replace>
+  {}{}% <success><failure>
+\makeatother
+ 
+%----------------------------------------------------------------------------------------
+%   NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Justin} % Your first name
+\familyname{Ellis} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{Jet Propulsion Laboratory, 4800 Oak Grove Drive}{Pasadena, CA 91109}
+\phone[mobile]{+1 (304) 995-6951}
+\emailA{Justin.A.Ellis@jpl.nasa.gov}
+\emailB{justin.ellis18@gmail.com}
+%\homepage{}
+\social[github]{jellis18}
+\social[linkedin][www.linkedin.com/in/justin-ellis-44a32788]{justin-ellis}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	BLURB
+%----------------------------------------------------------------------------------------
+
+\small{Einstein Postdoctoral Fellow at the Jet Propulsion Laboratory/Caltech working on several data analysis tasks for pulsar timing arrays. Passionate about data analysis/science, machine learning, and data visualization. Have leadership experience working in large and small collaborations.}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+\vspace{6pt}
+
+\cventry{July 2011--June 2014}{PhD (Physics)}{University of Wisconsin Milwaukee}{Milwaukee, WI}{}{}
+\cventry{August 2009--June 2011}{PhD student in Physics}{West Virginia University}{Morgantown, WV}{}{}
+\cventry{January 2007--June 2009}{B.S. in Physics}{West Virginia University}{Morgantown, WV}{Mathematics, Astronomy minor}{}
+\cventry{August 2004--January 2006}{B.S. student in Mathematics}{Shepherd University}{Shepherdstown, WV}{}{}
+
+\section{Doctoral Thesis}
+\vspace{6pt}
+
+\cvitem{Title}{\emph{Searching for Gravitational Waves Using Pulsar Timing Arrays}}
+\cvitem{Advisor}{Dr. Xavier Siemens}
+\cvitem{Description}{This thesis details several new frequentist and Bayesian detection and characterization
+schemes for gravitational waves using pulsar timing arrays. These methods were applied to several real and synthetic
+datasets to produce stringent constraints on gravitational waves from supermassive black hole binaries.}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Professional Experience}
+\vspace{6pt}
+
+\subsection{Research Experience}
+\vspace{6pt}
+
+\cventry{September 2014--Present}{Einstein Postdoctoral Fellow}{NASA Jet Propulsion Laboratory}{Pasadena, CA}{}{}
+\cventry{September 2014--Present}{Visiting scholar (TAPIR group)}{California Institute of Technology}{Pasadena, CA}{}{}
+\cventry{July 2011--June 2014}{Graduate Research Assistant}{University of Wisconsin Milwaukee}{Milwaukee, WI}{Advisor: Dr. Xavier Siemens}{}
+\cventry{August 2009--June 2011}{Graduate Research Assistant}{West Virginia University}{Morgantown, WV}{Advisor: Dr. Maura McLaughlin}{}
+\cventry{June 2008--June 2009}{Undergraduate Research Assistant}{West Virginia University}{Morgantown, WV}{Advisor: Dr. Earl Scime}{}
+\cventry{August 2005--January 2006}{Undergraduate Research Assistant}{Shepherd University}{Shepherdstown, WV}{Advisor: Dr. Jason Best}{}
+
+\subsection{Teaching Experience}
+\vspace{6pt}
+
+\cventry{March 2016}{Co-organizer of NANOGrav student workshop}{California Institute of Technology}{Pasadena, CA}{}{}
+\cventry{September 2015}{Co-organizer of NANOGrav detection group workshop}{California Institute of Technology}{Pasadena, CA}{}{}
+\cventry{January 2010--August 2010}{Tutor (calculus based introductory physics)}{West Virginia University}{Morgantown, WV}{}{}
+\cventry{January 2008--August 2010}{Lab Instructor (calculus based introductory physics)}{West Virginia University}{Morgantown, WV}{}{}
+\cventry{September 2007--December 2007}{Lab Instructor (algebra based introductory physics)}{West Virginia University}{Morgantown, WV}{}{}
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Awards}
+\vspace{6pt}
+
+\cvitem{2015}{Chair of NANOGrav Gravitational Wave Detection Working Group }
+\cvitem{2014}{Einstein Fellowship (JPL/Caltech)}
+\cvitem{2014}{Papastamatiou Scholarship (UWM)}
+\cvitem{2013}{Distinguished Dissertation Fellowship (UWM)}
+\cvitem{2013}{NASA Wisconsin Space Grant Consortium Fellowship}
+\cvitem{2012}{Blue Apple Award (22nd Midwest Relativity Meeting)}
+\cvitem{2012}{NASA Wisconsin Space Grant Consortium Fellowship}
+\cvitem{2011}{Best Graduate Student Oral Presentation (West Virginia Academy of Science)}
+\cvitem{2009}{Outstanding Physics Senior Award (WVU)}
+\cvitem{2008}{Reddy Scholarship for Academic Excellence (WVU)}
+\cvitem{2008}{Eberly College of Arts and Sciences Award for Academic Excellence (WVU)}
+
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Computer skills}
+\vspace{6pt}
+
+\cvitem{OS}{OSX, Linux/Unix, Windows}
+\cvitem{Programming}{Python, C/C++, Fortran, Matlab, Mathematica}
+\cvitem{Typography}{\LaTeX, Microsoft Office, Pages, OpenOffice, Keynote}
+\cvitem{Data Science}{Scikit-learn, Pandas}
+
+
+%----------------------------------------------------------------------------------------
+%   AFFILIATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Professional Affiliations}
+\vspace{6pt}
+
+\cvitem{American Physical Society}{Member}
+\cvitem{American Astronomical Society}{Member}
+\cvitem{North American Nanohertz Observatory for Gravitational waves (NANOGrav)}{Full member}
+\cvitem{International Pulsar Timing Array (IPTA)}{Member}
+
+%----------------------------------------------------------------------------------------
+%   PRESENTATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Recent presentations}
+\vspace{6pt}
+
+\subsection{Invited Talks}
+
+\cvitem{April 2016}{\textit{PTA searches for Gravitational Waves: Astrophysics with non-detections}, University of Wisconsin Milwaukee CGCA Seminar, Milwaukee WI}
+\cvitem{April 2016}{\textit{Astrophysics with Pulsar Timing Arrays}, Northwestern University Lunch Seminar, Evanston, IL}
+\cvitem{November 2014}{\textit{Gravitational Wave Science Using Pulsar Timing Arrays}, Embry-Riddle University Colloquium, Prescott, AZ}
+\cvitem{October 2014}{\textit{Pulsar Timing Arrays: A Galactic Scale Gravitational Wave Detector}, Montana State Physics Department Colloquium, Bozeman, MT}
+\cvitem{October 2014}{\textit{Data Analysis for Pulsar Timing Arrays}, Montana State Physics Department Seminar, Bozeman, MT}
+\cvitem{June 2014}{\textit{The IPTA continuous wave search project.}, IPTA Meeting, Banff, Canada}
+\cvitem{July 2013}{\textit{Searching for Gravitational Waves using Pulsar Timing Arrays'' }, Cambridge University Seminar, Cambridge, UK}
+\cvitem{June 2013}{\textit{Single Source Detection and Upper Limits with IPTA data}, IPTA Meeting, Krabi Beach, Thailand}
+\cvitem{June 2012}{\textit{An Overview of Single-Source Detection Algorithms}, IPTA Meeting, Kiama, Australia}
+\vspace{6pt}
+
+\subsection{Contributed Talks}
+
+\cvitem{June 2016}{\textit{Trans-dimensional pulsar timing data analysis}, IPTA Meeting, Stellenbosch, South Africa}
+\cvitem{April 2016}{\textit{Trans-dimensional signal modeling in PTA data}, APS April Meeting, Salt Lake City, UT}
+\cvitem{August 2015}{\textit{Constraining Supermassive Black Hole Binary Dynamics Using Pulsar Timing Data}, IAU Meeting, Honolulu, HI}
+\cvitem{April 2015}{\textit{Preliminary NANOGrav limits on the isotropic stochastic GWB from the 9-year data release}, APS April Meeting, Baltimore, MD}
+\cvitem{January 2015}{\textit{Searching for GWs using pulsar timing arrays}, AAS Meeting, Seattle, WA}
+\cvitem{April 2014}{\textit{NANOGrav Limits on Gravitational Waves from Individual Supermassive Black Hole Binaries in Circular Orbits}, APS April Meeting, Savannah, GA}
+\cvitem{January 2014}{\textit{I get by with a little help from my friends: Enhancing PTA sensitivity to GWs using EM counterparts'}, AAS Meeting, Washington DC}
+\cvitem{October 2013}{\textit{Gravitational Wave Detection with Pulsar Timing Arrays}, CaJAGWR Seminar Caltech, Pasadena, CA}
+\cvitem{October 2013}{\textit{Gravitational Wave Detection with Pulsar Timing Arrays}, JPL Seminar, Pasadena, CA}
+\cvitem{August 2013}{\textit{Searching for Gravitational Waves using Pulsar Timing Arrays'}, Wisconsin Space Grant Consortium Conference, Milwaukee, WI}
+\cvitem{July 2013}{\textit{Continuous Gravitational Wave Search Methods and Results from PTAs}, 10th Edoardo Amldi Conference on Gravitational Waves, Warsaw, Poland}
+\cvitem{January 2013}{\textit{When Will We Detect GWs?}, Physical Applications of Millisecond Pulsars, Aspen, CO}
+\cvitem{January 2013}{\textit{Gravitational Wave Searches with Pulsar Timing Data}, AAS Meeting, Long Beach, CA}
+\cvitem{September 2012}{\textit{Gravitational Wave Searches with Pulsar Timing Arrays}, 22nd Midwest Relativity Meeting, Chicago, IL}
+\cvitem{August 2012}{\textit{Gravitational Wave Searches with Pulsar Timing Data}, IAU Meeting, Beijing, China}
+\cvitem{November 2011}{\textit{Detection Methods for Continuous Gravitational Waves Using Pulsar Timing Arrays}, 23rd Midwest Relativity Meeting, Urbana, IL}
+\cvitem{June 2011}{\textit{Detection of Continuous Gravitational Waves with Pulsar Timing Arrays}, IPTA Meeting, Snowshoe, WV}
+\vspace{6pt}
+
+\subsection{Posters}
+
+\cvitem{January 2012}{\textit{Bayesian Methods for Covariance Estimation of Pulsar Timing Residuals}, AAS Meeting, Austin, TX}
+\cvitem{July 2011}{\textit{Detection Methods for Continuous Gravitational Waves Using Pulsar Timing Arrays}, 9th Edoardo Amaldi Conference on Gravitational Waves, Cardiff, Wales}
+\cvitem{January 2011}{\textit{Continuous Gravitational Wave Searches in Pulsar Timing Data}, AAS Meeting, Seattle, WA}
+\cvitem{June 2010}{\textit{The impact of a stochastic gravitational-wave background on pulsar timing parameters'}, IPTA Meeting, Leiden, Netherlands}
+\cvitem{November 2008}{\textit{A magneto-optic probe for magnetic fluctuation measurements}, 0th Annual Meeting of the Division of Plasma Physics (DPP), Dallas Texas}
+
+%----------------------------------------------------------------------------------------
+%   PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+%\nocite{*}
+%\bibliographystyle{plainyr-rev}
+%\bibliography{pubs}   
+
+\nocite{*}
+\begin{thebibliography}{10}
+\vspace{6pt}
+
+\bibitem{fpe+16}
+E.~{Fonseca}, T.~T. {Pennucci}, \textbf{J.~A. {Ellis}}, I.~H. {Stairs}, D.~J. {Nice},
+  S.~M. {Ransom}, P.~B. {Demorest}, Z.~{Arzoumanian}, K.~{Crowter}, T.~{Dolch},
+  R.~D. {Ferdman}, M.~E. {Gonzalez}, G.~{Jones}, M.~L. {Jones}, M.~T. {Lam},
+  L.~{Levin}, M.~A. {McLaughlin}, K.~{Stovall}, J.~K. {Swiggum}, and W.~{Zhu}.
+\newblock {The NANOGrav Nine-year Data Set: Mass and Geometric Measurements of
+  Binary Millisecond Pulsars}.
+\newblock {\em Submitted to ApJ}, March 2016.
+
+\bibitem{ec16}
+\textbf{J.~A. {Ellis}} and N.~J. {Cornish}.
+\newblock {Transdimensional Bayesian approach to pulsar timing noise analysis}.
+\newblock {\em \prd}, 93(8):084048, April 2016.
+
+\bibitem{tve+16}
+S.~R. {Taylor}, M.~{Vallisneri}, \textbf{J.~A. {Ellis}}, C.~M.~F. {Mingarelli}, T.~J.~W.
+  {Lazio}, and R.~{van Haasteren}.
+\newblock {Are We There Yet? Time to Detection of Nanohertz Gravitational Waves
+  Based on Pulsar-timing Array Limits}.
+\newblock {\em \apjl}, 819:L6, March 2016.
+
+\bibitem{abb+16}
+Z.~{Arzoumanian}, A.~{Brazier}, S.~{Burke-Spolaor}, S.~J. {Chamberlin},
+  S.~{Chatterjee}, B.~{Christy}, J.~M. {Cordes}, N.~J. {Cornish}, K.~{Crowter},
+  P.~B. {Demorest}, X.~{Deng}, T.~{Dolch}, \textbf{J.~A. {Ellis}}, R.~D. {Ferdman},
+  E.~{Fonseca}, N.~{Garver-Daniels}, M.~E. {Gonzalez}, F.~{Jenet}, G.~{Jones},
+  M.~L. {Jones}, V.~M. {Kaspi}, M.~{Koop}, M.~T. {Lam}, T.~J.~W. {Lazio},
+  L.~{Levin}, A.~N. {Lommen}, D.~R. {Lorimer}, J.~{Luo}, R.~S. {Lynch}, D.~R.
+  {Madison}, M.~A. {McLaughlin}, S.~T. {McWilliams}, C.~M.~F. {Mingarelli},
+  D.~J. {Nice}, N.~{Palliyaguru}, T.~T. {Pennucci}, S.~M. {Ransom},
+  L.~{Sampson}, S.~A. {Sanidas}, A.~{Sesana}, X.~{Siemens}, J.~{Simon}, I.~H.
+  {Stairs}, D.~R. {Stinebring}, K.~{Stovall}, J.~{Swiggum}, S.~R. {Taylor},
+  M.~{Vallisneri}, R.~{van Haasteren}, Y.~{Wang}, W.~W. {Zhu}, and {The
+  NANOGrav Collaboration}.
+\newblock {The NANOGrav Nine-year Data Set: Limits on the Isotropic Stochastic
+  Gravitational Wave Background}.
+\newblock {\em \apj}, 821:13, April 2016.
+
+\bibitem{zsd+15}
+W.~W. {Zhu}, I.~H. {Stairs}, P.~B. {Demorest}, D.~J. {Nice}, \textbf{J.~A. {Ellis}},
+  S.~M. {Ransom}, Z.~{Arzoumanian}, K.~{Crowter}, T.~{Dolch}, R.~D. {Ferdman},
+  E.~{Fonseca}, M.~E. {Gonzalez}, G.~{Jones}, M.~L. {Jones}, M.~T. {Lam},
+  L.~{Levin}, M.~A. {McLaughlin}, T.~{Pennucci}, K.~{Stovall}, and
+  J.~{Swiggum}.
+\newblock {Testing Theories of Gravitation Using 21-Year Timing of Pulsar
+  Binary J1713+0747}.
+\newblock {\em \apj}, 809:41, August 2015.
+
+\bibitem{ccs+15}
+S.~J. {Chamberlin}, J.~D.~E. {Creighton}, X.~{Siemens}, P.~{Demorest},
+  \textbf{J.~A. {Ellis}}, L.~R. {Price}, and J.~D. {Romano}.
+\newblock {Time-domain implementation of the optimal cross-correlation
+  statistic for stochastic gravitational-wave background searches in pulsar
+  timing data}.
+\newblock {\em \prd}, 91(4):044048, February 2015.
+
+\bibitem{abb+15b}
+Z.~{Arzoumanian}, A.~{Brazier}, S.~{Burke-Spolaor}, S.~J. {Chamberlin},
+  S.~{Chatterjee}, J.~M. {Cordes}, P.~B. {Demorest}, X.~{Deng}, T.~{Dolch},
+  \textbf{J.~A. {Ellis}}, R.~D. {Ferdman}, N.~{Garver-Daniels}, F.~{Jenet}, G.~{Jones},
+  V.~M. {Kaspi}, M.~{Koop}, M.~T. {Lam}, T.~J.~W. {Lazio}, A.~N. {Lommen},
+  D.~R. {Lorimer}, J.~{Luo}, R.~S. {Lynch}, D.~R. {Madison}, M.~A.
+  {McLaughlin}, S.~T. {McWilliams}, D.~J. {Nice}, N.~{Palliyaguru}, T.~T.
+  {Pennucci}, S.~M. {Ransom}, A.~{Sesana}, X.~{Siemens}, I.~H. {Stairs}, D.~R.
+  {Stinebring}, K.~{Stovall}, J.~{Swiggum}, M.~{Vallisneri}, R.~{van
+  Haasteren}, Y.~{Wang}, W.~W. {Zhu}, and {NANOGrav Collaboration}.
+\newblock {The NANOGrav Nine-year Data Set: Observations, Arrival Time
+  Measurements, and Analysis of 37 Millisecond Pulsars}.
+\newblock {\em submitted to ApJ}, 2015.
+
+
+\bibitem{abb+14}
+Z.~{Arzoumanian}, A.~{Brazier}, S.~{Burke-Spolaor}, S.~J. {Chamberlin},
+  S.~{Chatterjee}, J.~M. {Cordes}, P.~B. {Demorest}, X.~{Deng}, T.~{Dolch},
+  \textbf{J.~A. {Ellis}}, R.~D. {Ferdman}, N.~{Garver-Daniels}, F.~{Jenet}, G.~{Jones},
+  V.~M. {Kaspi}, M.~{Koop}, M.~T. {Lam}, T.~J.~W. {Lazio}, A.~N. {Lommen},
+  D.~R. {Lorimer}, J.~{Luo}, R.~S. {Lynch}, D.~R. {Madison}, M.~A.
+  {McLaughlin}, S.~T. {McWilliams}, D.~J. {Nice}, N.~{Palliyaguru}, T.~T.
+  {Pennucci}, S.~M. {Ransom}, A.~{Sesana}, X.~{Siemens}, I.~H. {Stairs}, D.~R.
+  {Stinebring}, K.~{Stovall}, J.~{Swiggum}, M.~{Vallisneri}, R.~{van
+  Haasteren}, Y.~{Wang}, W.~W. {Zhu}, and {NANOGrav Collaboration}.
+\newblock {Gravitational Waves from Individual Supermassive Black Hole Binaries
+  in Circular Orbits: Limits from the North American Nanohertz Observatory for
+  Gravitational Waves}.
+\newblock {\em \apj}, 794:141, October 2014.
+
+
+\bibitem{sejr13}
+X.~{Siemens}, \textbf{J.~A. {Ellis}}, F.~{Jenet}, and J.~D. {Romano}.
+\newblock The stochastic background: scaling laws and time to detection for
+  pulsar timing arrays.
+\newblock {\em Classical and Quantum Gravity}, 30(22):224015, 2013.
+
+\bibitem{esvh13}
+\textbf{J.~A. {Ellis}}, X.~{Siemens}, and R.~{van Haasteren}.
+\newblock {An Efficient Approximation to the Likelihood for Gravitational Wave
+  Stochastic Background Detection Using Pulsar Timing Data}.
+\newblock 769:63, May 2013.
+
+\bibitem{e13}
+\textbf{J.~A. {Ellis}}.
+\newblock A bayesian analysis pipeline for continuous gw sources in the pta
+  band.
+\newblock {\em Classical and Quantum Gravity}, 30(22):224004, 2013.
+
+\bibitem{dfg+13}
+P.~B. {Demorest}, R.~D. {Ferdman}, M.~E. {Gonzalez}, D.~{Nice}, S.~{Ransom},
+  I.~H. {Stairs}, Z.~{Arzoumanian}, A.~{Brazier}, S.~{Burke-Spolaor}, S.~J.
+  {Chamberlin}, J.~M. {Cordes}, \textbf{J.~A. {Ellis}}, L.~S. {Finn}, P.~{Freire},
+  S.~{Giampanis}, F.~{Jenet}, V.~M. {Kaspi}, J.~{Lazio}, A.~N. {Lommen},
+  M.~{McLaughlin}, N.~{Palliyaguru}, D.~{Perrodin}, R.~M. {Shannon},
+  X.~{Siemens}, D.~{Stinebring}, J.~{Swiggum}, and W.~W. {Zhu}.
+\newblock {Limits on the Stochastic Gravitational Wave Background from the
+  North American Nanohertz Observatory for Gravitational Waves}.
+\newblock 762:94, January 2013.
+
+\bibitem{esc12}
+\textbf{J.~A. {Ellis}}, X.~{Siemens}, and J.~D.~E. {Creighton}.
+\newblock {Optimal Strategies for Continuous Gravitational Wave Detection in
+  Pulsar Timing Arrays}.
+\newblock 756:175, September 2012.
+
+\bibitem{ejm12}
+\textbf{J.~A. {Ellis}}, F.~A. {Jenet}, and M.~A. {McLaughlin}.
+\newblock {Practical Methods for Continuous Gravitational Wave Detection Using
+  Pulsar Timing Data}.
+\newblock 753:96, July 2012.
+
+\bibitem{esc12b}
+\textbf{J.~A. {Ellis}}, X.~{Siemens}, and S.~{Chamberlin}.
+\newblock {Results of the First IPTA Closed Mock Data Challenge}.
+\newblock {\em arXiv:1210:5274}, October 2012.
+
+\bibitem{emv11}
+\textbf{J.~A. {Ellis}}, M.~A. {McLaughlin}, and J.~P.~W. {Verbiest}.
+\newblock {The impact of a stochastic gravitational-wave background on pulsar
+  timing parameters}.
+\newblock 417:2318--2329, November 2011.
+
+\bibitem{pet+09}
+W.S. Przybysz, \textbf{J.~A. {Ellis}}, S.C. Thakur, A.~Hansen, R.A. Hardin, S.~Sears, and
+  E.E. Scime.
+\newblock A magneto-optic probe for magnetic fluctuation measurements.
+\newblock {\em Rev Sci Instrum}, 80(10):103502, 2009.
+
+\end{thebibliography}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
