@@ -1,0 +1,188 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.2 (25/3/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage[scale=0.8]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\makeatletter
+\newcommand*{\emailA}[1]{\def\@emailA{#1}}
+\newcommand*{\emailB}[1]{\def\@emailB{#1}}
+\patchcmd{\maketitle}% <cmd>
+  {\ifthenelse{\isundefined{\@email}}{}{\addtomaketitle{\emailsymbol\emaillink{\@email}}}}% <search>
+  {\ifthenelse{\isundefined{\@emailA}}{}{\addtomaketitle{\emailsymbol\emaillink{\@emailA}}}%
+   \ifthenelse{\isundefined{\@emailB}}{}{\addtomaketitle{\emailsymbol\emaillink{\@emailB}}}}% <replace>
+  {}{}% <success><failure>
+\makeatother
+
+\patchcmd{\maketitle}
+  {\hfil}
+  {\hspace*{0.15\textwidth}}
+  {}
+  {}
+\patchcmd{\maketitle}
+  {\setlength{\maketitlewidth}{0.8\textwidth}}
+  {\setlength{\maketitlewidth}{0.67\textwidth}}
+  {}
+  {}
+\patchcmd{\maketitle}
+  {\\[2.5em]}
+  {\hfil\raisebox{-.7cm}{\framebox{\includegraphics[width=\@photowidth]{\@photo}}}\\[2.5em]}
+  {}
+  {}
+ 
+%----------------------------------------------------------------------------------------
+%   NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Justin} % Your first name
+\familyname{Ellis} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Resum\'{e}}
+\address{Jet Propulsion Laboratory, 4800 Oak Grove Drive}{Pasadena, CA 91109}
+\phone[mobile]{+1 (304) 995-6951}
+\emailA{Justin.A.Ellis@jpl.nasa.gov}
+\emailB{justin.ellis18@gmail.com}
+%\homepage{}
+\social[github]{jellis18}
+\social[linkedin][www.linkedin.com/in/justin-ellis-44a32788]{justin-ellis}
+\photo[50pt][0.4pt]{images/ellis-4.jpg}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	Qualifications
+%----------------------------------------------------------------------------------------
+
+\section{Qualifications}
+\vspace{6pt}
+
+Skilled scientist and software developer with expertise in problem-solving, mathematics, data and statistical analysis, and data visualization. I have many years of experience in scientific computing using Python, C/C++, Fortran, Matlab, Linux, and Mathematica. I also have extensive research experience in data analysis theory and application, technical writing and public speaking. I am a fast learner and really enjoy working on new projects in many areas.
+
+%----------------------------------------------------------------------------------------
+%	GOALS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Goals}
+\vspace{6pt}
+
+To work on technical and intellectually challenging projects that would benefit from my expertise in data analysis, problem-solving, and mathematics. Am particularly interested in extracting interesting and valuable insights from large and/or noisy data sets and discovering new  and effective ways to visualize these data. Am interested in learning more about big data tools and machine learning. Currently finishing up a 3-year academic fellowship but will be available for full-time, part-time, or contract work beginning in the summer of 2017.
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Scientific Experience}
+\vspace{6pt}
+
+\cventry{September 2014--present}{Jet Propulsion Laboratory}{Einstein Postdoctoral Fellow}{}{}{}
+\begin{itemize}
+\item Chair of gravitational wave detection working group for NANOGrav
+\item Develop and maintain a large Python code base for pulsar timing data analysis
+\item Have mentored graduate and undergraduate students in pulsar timing data analysis
+\item Organized several data analysis workshops and schools
+\item Beginning work on machine learning classification of Quasar candidates
+\end{itemize}
+\vspace{6pt}
+
+\cventry{July 2011--June 2014}{UWM Center for Gravitational, Cosmology, and Astrophysics}{Graduate Research Assistant}{}{}{}
+\begin{itemize}
+\item Played a leading role in the development of several pulsar timing data analysis pipelines
+\item Developed several simulation techniques for gravitational wave sensitivity projections used in successful NSF grants
+\end{itemize}
+\vspace{6pt}
+
+\cventry{August 2009--June 2011}{WVU Department of Physics and Astronomy}{Graduate Research Assistant}{}{}{}
+\begin{itemize}
+\item Began research career in pulsar timing data analysis
+\item Taught and tudored for algebra and calculus based introductory physics courses
+
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+\vspace{6pt}
+
+\cventry{2014}{PhD in Physics}{University of Wisconsin Milwaukee}{Milwaukee, WI}{}{}
+\cventry{2009}{B.S. in Physics}{West Virginia University}{Morgantown, WV}{(Mathematics and Astronomy minor)}{}
+
+%----------------------------------------------------------------------------------------
+%	DATA SCIENCE HIGHLIGHTS
+%----------------------------------------------------------------------------------------
+
+%\section{Recent Data Science Highlights}
+%\vspace{6pt}
+%
+%\begin{itemize}
+%
+%\item Have begun individual project exploring police shooting data and other county and local information such as crime rates, poverty rates, income levels, high school graduation rates, etc.. 
+%
+%\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	SCIENTIFIC HIGHLIGHTS
+%----------------------------------------------------------------------------------------
+
+\section{Recent Scientific Highlights}
+\vspace{6pt}
+
+\begin{itemize}
+
+\item Devised a new method to model non-gaussian transient features in pulsar timing data using reversible jump Markov Chain Monte-Carlo and model averaging techniques. This work is reported in my 2016 \emph{Physical Review D} paper and has led to several new and interesting insights in to the nature of the pulsar timing data.
+\vspace{6pt}
+
+\item Developed and implemented complex and robust noise models for pulsar timing data. Worked with the pulsar timing working group within NANOGrav to implement these models in to the standard pulsar timing software and analysis packages. These new techniques allow for more robust and unbiased estimation of pulsar timing parameters and lead to new pulsar mass measurements, tests of General Relativity, and tests of fundamental physics.
+\vspace{6pt}
+
+\item Led the NANOGrav detection group in and extensive study of upper limits on gravitational waves due to supermassive black hole binaries. This study was the first of its kind it that it attempted to place constraints on physical parameters related to galaxy evolution and dynamics instead of just on the gravitational waves emitted. This work was part of a NASA and NRAO press release and was reported in several popular science outlets.
+\vspace{6pt}
+
+\item Have authored or co-authored 17 peer-reviewed scientific publications available at.
+\vspace{6pt}
+
+\item Have run several workshops and schools training undergraduate and graduate students in data analysis, particularly for time series analysis using Bayesian methods.
+\vspace{6pt}
+
+\item Have given many scientific presentations at astronomy and physics conferences and invited lectures at various universities. 
+
+\end{itemize}
+
+
+
+\end{document}
