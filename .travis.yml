@@ -3,3 +3,6 @@ install:
 
 script:
     - make
+
+after_success:
+    - make clean
