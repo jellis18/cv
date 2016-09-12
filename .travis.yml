@@ -12,6 +12,6 @@ after_success: |
     git rm -rf .
     git add -f JAE-resume-2016.pdf JAE-CV-2016.pdf
     git -c user.name='travis' -c user.email='travis' commit -m init
-    git push -f https://jellis18:$GITHUB_API_KEY@github.com/jellis18/cv pdf
+    git push -f -q https://jellis18:$GITHUB_API_KEY@github.com/jellis18/cv pdf
     fi
 
