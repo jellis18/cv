@@ -6,10 +6,12 @@ install:
 script:
     - make
 
-after_success:
-    - git checkout --orphan pdf
-    - git rm -rf .
-    - git add -f JAE-resume-2016.pdf JAE-CV-2016.pdf
-    - git -c user.name='travis' -c user.email='travis' commit -m init
-    - git push -f https://github.com/jellis18/cv pdf
-#- git push -q -f https://dfm:$GITHUB_API_KEY@github.com/davidwhogg/mcmc pdf
+after_success: |
+    if [ -n "$GITHUB_API_KEY" ]; then
+    git checkout --orphan pdf
+    git rm -rf .
+    git add -f JAE-resume-2016.pdf JAE-CV-2016.pdf
+    git -c user.name='travis' -c user.email='travis' commit -m init
+    git push -f https://jellis18:$GITHUB_API_KEY@github.com/jellis18/cv pdf
+    fi
+
